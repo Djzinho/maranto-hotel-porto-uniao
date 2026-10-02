@@ -120,3 +120,47 @@
   .btn{min-height:46px;padding-inline:18px}
   .room-copy a{padding:10px 13px}
 }
+
+/* Mobile experience v2 */
+.rooms-mobile-guide{display:none}
+@media(max-width:780px){
+  .rooms.dark-section{padding-right:0;overflow:hidden}
+  .rooms-head{padding-right:20px;margin-bottom:22px}
+  .rooms-head>p{max-width:310px}
+  .rooms-mobile-guide{display:flex;align-items:center;justify-content:space-between;padding-right:20px;margin:0 0 18px}
+  .rooms-mobile-guide>span{color:rgba(241,236,226,.58);font-size:.58rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em}
+  .rooms-progress{display:flex;align-items:center;gap:5px}
+  .rooms-progress i{display:block;width:16px;height:2px;background:rgba(241,236,226,.2);transition:width .3s var(--ease),background .3s var(--ease)}
+  .rooms-progress i.is-active{width:32px;background:#d9b777}
+  .room-list{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:min(82vw,330px);gap:14px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x mandatory;scroll-padding-left:0;padding:0 20px 22px 0;margin:0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .room-list::-webkit-scrollbar{display:none}
+  .room-list .room{scroll-snap-align:start;scroll-snap-stop:always;min-width:0;margin:0;transform:none}
+  .room-list .room.reveal{opacity:1;transform:none}
+  .room-list .room:first-child{margin-left:0}
+  .room-media{height:300px}
+  .room-copy{min-height:205px;padding:23px 20px 25px}
+  .room-copy h3{font-size:2.35rem}
+}@media(max-width:780px){
+  .trust{padding:20px 0 20px 18px;gap:14px;overflow:hidden}
+  .trust p{padding-right:18px;font-size:1.18rem}
+  .trust>div{display:flex;flex-wrap:nowrap;justify-content:flex-start;gap:8px;width:100%;overflow-x:auto;padding-right:18px;scrollbar-width:none}
+  .trust>div::-webkit-scrollbar{display:none}
+  .trust span{flex:0 0 auto;white-space:nowrap;padding:9px 11px;border:1px solid rgba(23,22,20,.14);border-radius:999px;background:rgba(255,255,255,.18)}
+  .intro-photo{margin-left:-18px;margin-right:-18px;margin-top:42px}
+  .intro-photo img{height:410px}
+  .intro-photo figcaption{left:18px;bottom:18px;max-width:250px}
+  .morning-media{height:390px;min-height:390px}
+  .morning-copy{position:relative;z-index:3;margin:-78px 18px 0;padding:34px 22px 158px;background:#191917;border-top:1px solid rgba(217,183,119,.45)}
+  .morning-copy>p:not(.kicker){font-size:.86rem}
+  .suite-detail{left:18px;width:calc(100% - 36px);bottom:-82px}
+  .location{padding-top:150px}
+  .map-art{margin-left:-18px;margin-right:-18px;width:auto;min-height:390px;box-shadow:none;border-left:0;border-right:0}
+  .closing{min-height:560px}
+  .closing-content{justify-content:flex-end;min-height:560px;padding-bottom:92px}
+  .closing h2{max-width:330px}
+}
+@media(max-width:430px){
+  .room-list{grid-auto-columns:84vw}
+  .room-media{height:286px}
+  .intro-photo img{height:390px}
+}
